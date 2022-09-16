@@ -20,9 +20,9 @@
         class restaurantManager {
 
             restaurantList = [
-                { name: "Hotel Nandan", location: "Church Road", city: "Berhampur" },
-                { name: "The Marinated", location: "Bombay Chowk", city: "Jharsuguda" },
-                { name: "KFC", location: "Jayadev Vihar", city: "Bhubaneswar" },
+                { name: "KFC", location: "Church Road", city: "Chennai" },
+                { name: "PSR Restaurant", location: "Pushpa theatre", city: "Tirupur" },
+                { name: "Coffee day", location: "Jayadev Vihar", city: "Delhi" },
             ];
 
             printAllRestaurantNames() {
@@ -34,16 +34,28 @@
         let obj = new restaurantManager();
         obj.printAllRestaurantNames();
 
-        let city = ["Berhampur", "Bhubaneswar", "Jharsuguda"]
-        function Berhampur(value) {
-            return value = Berhampur;
+        var restaurantList=[
+    {
+        name:"Kfc",
+        Address:"viveganadha",
+        city:"Chennai"
+    },
+     {
+        name:"Psr",
+        Address:"Pushpa",
+        city:"Tirupur"
+
+     }
+    ];
+
+        function cityFil(value){
+            return value.city=="Chennai";
         }
-        let cityBerhampur = city.filter(Berhampur)
-        console.log(cityBerhampur)
+
+        console.log(restaurantList.filter(cityFil));
 
 
-        // SOLUTION - 2
-  //2. Please find order details for Punjabi Tadka restaurant in Delhi as:
+       //2. Please find order details for Punjabi Tadka restaurant in Delhi as:
 console.log("\n\n\n");
 const orderData = {
   "Below 500": 20,
@@ -59,11 +71,11 @@ const totalOrderArray = Object.values(orderData);
 for (let i = 0; i < totalOrderArray.length; i++) {
   totalOrderPlaced += totalOrderArray[i];
 }
-console.log(`Total number of orders placed = ${totalOrderPlaced}`);
+console.log("Total number of orders placed", totalOrderPlaced);
 
 //b. Calculate the number of order proportion option.
 const proportion = Object.keys(orderData).length;
-console.log(`Total number of order proportions = ${proportion}`);
+console.log("Total number of order proportions", proportion);
 
 //c. Calculate the percentage of each proportion in below format:
 
@@ -91,8 +103,6 @@ console.log("Array of Objects :-");
 for (let i = 0; i < outputArray.length; i++) {
   console.log(outputArray[i]);
 }
-
-
     </script>
 </body>
 
